@@ -8,8 +8,8 @@
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>kafka-streams-try-2</name>
-	<description>Demo project for Spring Boot</description>
+	<name>kafka-streams-spring-boot-json-example</name>
+	<description>This is a Spring Boot example of how to read in JSON from a Kakfa topic and, via Kafka Streams, create a single json doc from subsequent JSON documents</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
