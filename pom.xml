@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.gilbarco.passport</groupId>
-	<artifactId>kafka-streams-try-2</artifactId>
+	<groupId>com.mna.demo</groupId>
+	<artifactId>kafka-streams-spring-boot-json-example</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
