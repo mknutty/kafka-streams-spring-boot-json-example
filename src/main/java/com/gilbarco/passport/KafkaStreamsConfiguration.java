@@ -53,13 +53,13 @@ public class KafkaStreamsConfiguration {
     public KStream<String, Test> kStreamJson(StreamsBuilder builder) {
     	KStream<String, Test> stream = builder.stream("streams-json-input", Consumed.with(Serdes.String(), new JsonSerde<>(Test.class)));
     	
-    	KTable<String, Test> totalEditsByUser = stream
+    	KTable<String, Test> combinedDocuments = stream
 			.map(new TestKeyValueMapper())
 			.groupByKey()
 			.reduce(new TestReducer(), Materialized.<String, Test, KeyValueStore<Bytes, byte[]>>as("streams-json-store"))
     		;
     	
-    	totalEditsByUser.toStream().to("streams-json-output", Produced.with(Serdes.String(), new JsonSerde<>(Test.class)));
+    	combinedDocuments.toStream().to("streams-json-output", Produced.with(Serdes.String(), new JsonSerde<>(Test.class)));
         
         return stream;
     }
