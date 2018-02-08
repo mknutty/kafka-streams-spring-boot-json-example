@@ -15,9 +15,9 @@ To run this locally,
 4. Start the consumer connecting to the output topic. Instructions for running it are here - https://kafka.apache.org/quickstart#quickstart_consume .
 
 5. Run the producer connecting to the input topic and send JSON messages.	
-	a. Instructions are here - https://kafka.apache.org/quickstart#quickstart_send 
-	b. The JSON format is like this - {"key":"somekey","words":["word1"]} 
-	c. Send subsequent JSON documents changing the "words". e.g. {"key":"somekey","words":["word2"]}.
+    1. Instructions are here - https://kafka.apache.org/quickstart#quickstart_send 
+    2. The JSON format is like this - {"key":"somekey","words":["word1"]} 
+    3. Send subsequent JSON documents changing the "words". e.g. {"key":"somekey","words":["word2"]}.
     
     
 If you forget to create the topics first, weird things will happen (i.e. messages might not seem to process till you send another or restart the app). If things get screwed up, stop all the processes (Consumer, App, Producer, Kafka, Zookeeper), delete things in /logs and /tmp and redo 1-5 (sans the install parts - Run Zookeeper, Kafka. Create topics. Run App, Consumer, Producer. Send JSON).
